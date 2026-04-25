@@ -19,6 +19,7 @@ app.jinja_loader = ChoiceLoader([
     FileSystemLoader(os.path.join(BASE_DIR, "templates")),
     FileSystemLoader(os.path.join(BASE_DIR, "../frontend")),
     FileSystemLoader(os.path.join(BASE_DIR, "../frontend/pages")),
+    FileSystemLoader(os.path.join(BASE_DIR, "..")),
 ])
 
 api = Api(app)  # ← SIEMPRE AL FINAL
