@@ -13,7 +13,7 @@ app = Flask(__name__,
             static_folder=os.path.join(BASE_DIR, "../frontend"),
             static_url_path="/frontend")
 
-app.secret_key = "clave_secreta_123"  # ← AGREGÁ ACÁ
+app.secret_key = os.environ.get("SECRET_KEY", "clave_secreta_123")
 
 app.jinja_loader = ChoiceLoader([
     FileSystemLoader(os.path.join(BASE_DIR, "templates")),
