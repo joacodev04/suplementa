@@ -59,6 +59,22 @@ def login():
 
     return render_template("login.html")
 
+@app.route("/tienda")
+def tienda():
+    return render_template("tienda.html")
+
+@app.route("/sobrenosotros")
+def sobrenosotros():
+    return render_template("sobrenosotros.html")
+
+@app.route("/contactanos")
+def contactanos():
+    return render_template("contactanos.html")
+
+@app.route("/carrito")
+def carrito():
+    return render_template("carrito.html")
+
 if __name__ == "__main__":
     generar_usuario()
     app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
