@@ -27,7 +27,11 @@ api = Api(app)  # ← SIEMPRE AL FINAL
 def cargar_usuarios():
     with open("user.json", "r") as archivo:
         return json.load(archivo)
-    
+
+@app.route("/index.html")
+def index():
+    return render_template("index.html")
+
 @app.route ("/")
 def home():
     return render_template("login.html")
